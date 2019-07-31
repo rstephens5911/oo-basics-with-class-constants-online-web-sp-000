@@ -15,7 +15,7 @@ class Shoe
     end
     brand_unique
   end
-      
+
 
   end
 
