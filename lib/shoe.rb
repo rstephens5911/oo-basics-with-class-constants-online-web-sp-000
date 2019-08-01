@@ -6,23 +6,13 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    if !(BRANDS.include? (@brand)
+      BRANDS << brand
+    end
   end
 
   def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
   end
-
-  def brand= (brand)
-    @brand = brand
-    brand.collect do |index, element|
-      if element[index] != element[index + 1]
-        BRANDS << brand
-      end
-    end
-    BRANDS
-  end
-
-
 end
