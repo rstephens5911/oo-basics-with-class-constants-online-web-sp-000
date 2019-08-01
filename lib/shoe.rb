@@ -16,7 +16,11 @@ class Shoe
 
   def brand= (brand)
     @brand = brand
-    BRANDS << brand
+    brand.collect do |index, element|
+      if element[index] != element[index + 1]
+        BRANDS << brand
+      end
+    end
   end
 
 
